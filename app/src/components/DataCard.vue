@@ -1,6 +1,6 @@
 <template>
     <router-link :to="DataPath" class="card">
-        <h2>{{ Restruants.name }}</h2>
+        <h2>{{ Restruants.establishment_record_dba }}</h2>
         <h3>{{ id }}</h3>
     </router-link>
 </template>
@@ -18,7 +18,7 @@ const props = defineProps({
     }
 })
 const DataPath = computed(() =>{
-    return '/Main/${props.Restruants.name}'
+    return '/Main/${props.Restruants.establishment_record_dba}'
 })
 </script>
 
