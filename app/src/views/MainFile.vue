@@ -1,11 +1,13 @@
 <template>
     <div>
-
+      <DataCard v-for="(Dat, index) in TData" :key="Dat.establishment_record_dba"
+      :TData="Dat" :id="index + 1"/>
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import DataCard from '@/components/DataCard.vue';
 const TData = ref([])
 async function getData(){
   try {
@@ -16,6 +18,7 @@ async function getData(){
     console.log(error)
   }
 }
+
 onMounted(()=> {
   getData()
 })
