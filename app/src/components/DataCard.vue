@@ -1,7 +1,7 @@
 <template>
     <router-link :to="DataPath" class="card">
-        <h2>{{ Restruants.establishment_record_dba }}</h2>
-        <h3>{{ id }}</h3>
+        <h2>{{ props.Restruants.business_name }}</h2>
+        <h3>{{ props.id }}</h3>
     </router-link>
 </template>
 
