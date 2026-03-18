@@ -2,6 +2,7 @@
     <router-link :to="DataPath" class="card">
         <h2>{{ props.TData.business_name }}</h2>
 
+        <h3>{{ props.TData.borough }}</h3>
         <h3>{{ props.TData.street }}</h3>
         <h3>{{ props.TData.business_phone }}</h3>
         <h3>{{ props.id }}</h3>
