@@ -14,8 +14,7 @@ async function getData(){
     const response = await fetch('https://data.cityofnewyork.us/resource/5vi6-xdpy.json')
     const data = await response.json()
     TData.value = data
-    console.log("works")
-
+    
   } catch (error) {
     console.log(error)
   }
