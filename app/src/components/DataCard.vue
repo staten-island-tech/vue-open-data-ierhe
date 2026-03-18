@@ -21,7 +21,7 @@ const props = defineProps({
     }
 })
 const DataPath = computed(() =>{
-    return '/Main/${props.TData.business_name}'
+    return `/${props.TData.business_name}`
 })
 </script>
 
