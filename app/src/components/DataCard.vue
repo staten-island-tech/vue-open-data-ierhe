@@ -1,6 +1,9 @@
 <template>
     <router-link :to="DataPath" class="card">
-        <h2>{{ props.Restruants.business_name }}</h2>
+        <h2>{{ props.TData.business_name }}</h2>
+
+        <h3>{{ props.TData.street }}</h3>
+        <h3>{{ props.TData.business_phone }}</h3>
         <h3>{{ props.id }}</h3>
     </router-link>
 </template>
@@ -8,7 +11,7 @@
 <script setup>
 import { computed } from 'vue';
 const props = defineProps({
-    Restruants:{
+    TData:{
         type: Object, 
         required: true 
     }, 
@@ -18,7 +21,7 @@ const props = defineProps({
     }
 })
 const DataPath = computed(() =>{
-    return '/Main/${props.Restruants.establishment_record_dba}'
+    return '/Main/${props.TData.business_name}'
 })
 </script>
 
