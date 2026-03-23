@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'January', 'February', 'March' ],
+        labels: [ 'January', 'February', 'March' ], //boroughs
         datasets: [ { data: [40, 20, 12] } ]
       },
       chartOptions: {
