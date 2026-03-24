@@ -18,8 +18,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: [ 'January', 'February', 'March' ], //boroughs
-        datasets: [ { data: [40, 20, 12] } ]
+        labels: ['S', 'B', 'M'], //boroughs
+        datasets: [ { data: {TData} } ]
       },
       chartOptions: {
         responsive: true
@@ -27,4 +27,27 @@ export default {
     }
   }
 }
+
+import { ref, onMounted } from 'vue';
+
+const TData = ref([])
+async function getData(){
+  try {
+    const response = await fetch('https://data.cityofnewyork.us/resource/5vi6-xdpy.json')
+    const data = await response.json()
+    TData.value = data
+    
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+onMounted(()=> {
+  getData()
+})
+
 </script>
+
+<style scoped>
+
+</style>
