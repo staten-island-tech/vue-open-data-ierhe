@@ -6,11 +6,12 @@
   />
 </template>
 
-<script>
+<script >
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+
 
 export default {
   name: 'BarChart',
@@ -19,7 +20,10 @@ export default {
     return {
       chartData: {
         labels: ['Staten Island', 'Brooklyn', 'Manhattan'], //boroughs
-        datasets: [ { data: {x} } ]
+        datasets: [ { data: [800, 200, 400] } ],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)'
+        ]
       },
       chartOptions: {
         responsive: true
@@ -49,7 +53,6 @@ const x = ref([])
 
 onMounted(()=> {
   getData()
-
 })
 
 </script>
