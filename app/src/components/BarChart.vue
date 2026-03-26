@@ -18,8 +18,8 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['S', 'B', 'M'], //boroughs
-        datasets: [ { data: {TData} } ]
+        labels: ['Staten Island', 'Brooklyn', 'Manhattan'], //boroughs
+        datasets: [ { data: {x} } ]
       },
       chartOptions: {
         responsive: true
@@ -36,14 +36,20 @@ async function getData(){
     const response = await fetch('https://data.cityofnewyork.us/resource/5vi6-xdpy.json')
     const data = await response.json()
     TData.value = data
+    x.value = data.borough
+
     
   } catch (error) {
     console.log(error)
   }
 }
 
+const x = ref([])
+
+
 onMounted(()=> {
   getData()
+
 })
 
 </script>
