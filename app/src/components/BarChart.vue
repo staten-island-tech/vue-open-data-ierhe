@@ -20,10 +20,14 @@ export default {
     return {
       chartData: {
         labels: ['Staten Island', 'Brooklyn', 'Manhattan'], //boroughs
-        datasets: [ { data: [800, 200, 400] } ],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)'
+        datasets: [ { data: [800, 200, 400],
+          backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(255, 205, 86, 0.2)',
         ]
+        } ],
+
       },
       chartOptions: {
         responsive: true
