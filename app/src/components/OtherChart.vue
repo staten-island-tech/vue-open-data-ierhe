@@ -20,7 +20,7 @@ export default {
   data() {
     return {
       chartData: {
-        labels: ['Staten Island', 'Brooklyn', 'Manhattan'], //boroughs
+        labels: ['Edison', 'Brooklyn'], //City
         datasets: [ { data: [800, 200, 400],
           backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
